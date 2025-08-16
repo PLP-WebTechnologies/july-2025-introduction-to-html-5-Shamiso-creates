@@ -3,318 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A beginner's guide to web development with tutorials on HTML, CSS, and JavaScript">
-    <meta name="keywords" content="HTML, CSS, JavaScript, web development, beginner programming">
-    <meta name="author" content="Jane Developer">
-    <title>Beginner Web Developer | HTML & CSS Tutorials</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 1.5rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        /* Navigation */
-        nav {
-            width: 100%;
-            background-color: #34495e;
-            border-radius: 5px;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0.5rem;
-        }
-        
-        nav li {
-            margin: 0 1rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem;
-            border-radius: 3px;
-            transition: background-color 0.3s;
-        }
-        
-        nav a:hover, 
-        nav a:focus {
-            background-color: #4a6b8f;
-            outline: 2px solid white;
-        }
-        
-        /* Main Content */
-        main {
-            padding: 2rem 0;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #3498db, #8e44ad);
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        section {
-            background-color: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        section h2 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #3498db;
-        }
-        
-        .card {
-            background-color: #f1f5f9;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            transition: transform 0.3s;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .card h3 {
-            color: #2980b9;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            padding: 2rem 0;
-            margin-top: 2rem;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            background-color: #34495e;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: #4a6b8f;
-        }
-        
-        /* Accessibility Focus */
-        :focus {
-            outline: 3px solid #3498db;
-            outline-offset: 2px;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav li {
-                margin: 0.5rem 0;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
-        
-        /* Skip to Content Link */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #2c3e50;
-            color: white;
-            padding: 8px;
-            z-index: 100;
-        }
-        
-        .skip-link:focus {
-            top: 0;
-        }
-    </style>
+    <meta name="description" content="Beginner-friendly HTML5 tutorial covering semantic structure, accessibility, and SEO best practices for new web developers">
+    <meta name="keywords" content="HTML5, beginner programming, web development, semantic HTML, accessibility, SEO">
+    <title>HTML5 Tutorial for Beginners | Semantic Web Development</title>
 </head>
 <body>
-    <!-- Skip to Content Link for Accessibility -->
+    <!-- Skip Navigation Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- Header with Logo and Navigation -->
-    <header>
-        <div class="container header-content">
-            <div class="logo" role="banner">
-                <span aria-hidden="true">💻</span>
-                <h1>Beginner Coder</h1>
-            </div>
-            <nav aria-label="Main Navigation">
-                <ul>
-                    <li><a href="#" aria-current="page">Home</a></li>
-                    <li><a href="#">Tutorials</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <!-- Page Header -->
+    <header role="banner">
+        <h1>HTML5 Fundamentals for Beginners</h1>
+        <p>A comprehensive guide to semantic web development</p>
     </header>
     
-    <!-- Main Content -->
-    <main id="main-content">
-        <div class="container">
-            <section class="hero" aria-labelledby="hero-heading">
-                <h1 id="hero-heading">Welcome to Web Development!</h1>
-                <p>Learn HTML, CSS, and JavaScript with beginner-friendly tutorials and examples.</p>
-            </section>
+    <!-- Navigation Section -->
+    <nav role="navigation" aria-label="Main Navigation">
+        <h2 class="visually-hidden">Main Navigation</h2>
+        <ul>
+            <li><a href="#semantics">Semantic HTML</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+            <li><a href="#seo">SEO Basics</a></li>
+            <li><a href="#structure">Page Structure</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content Area -->
+    <main id="main-content" role="main">
+        <!-- Introduction Section -->
+        <section aria-labelledby="intro-heading">
+            <h2 id="intro-heading">Getting Started with HTML5</h2>
+            <p>Welcome to our beginner-friendly HTML5 tutorial! This guide focuses on semantic structure, accessibility enhancements, and SEO best practices.</p>
             
-            <div class="content-grid">
-                <!-- HTML Section -->
-                <section aria-labelledby="html-heading">
-                    <h2 id="html-heading">HTML Basics</h2>
-                    <div class="card">
-                        <h3>Semantic HTML</h3>
-                        <p>Learn how to use proper semantic elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; to create accessible websites.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Forms and Inputs</h3>
-                        <p>Create accessible forms with proper labels, placeholders, and validation.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Images and Multimedia</h3>
-                        <p>Add images and videos with proper alt text for accessibility.</p>
-                    </div>
-                </section>
-                
-                <!-- CSS Section -->
-                <section aria-labelledby="css-heading">
-                    <h2 id="css-heading">CSS Fundamentals</h2>
-                    <div class="card">
-                        <h3>Selectors and Specificity</h3>
-                        <p>Understand how CSS selectors work and how to apply styles effectively.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Layout Techniques</h3>
-                        <p>Learn Flexbox and Grid to create modern, responsive layouts.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Responsive Design</h3>
-                        <p>Create websites that look great on all devices with media queries.</p>
-                    </div>
-                </section>
-                
-                <!-- JavaScript Section -->
-                <section aria-labelledby="js-heading">
-                    <h2 id="js-heading">JavaScript Essentials</h2>
-                    <div class="card">
-                        <h3>Variables and Data Types</h3>
-                        <p>Learn about JavaScript variables and different data types.</p>
-                    </div>
-                    <div class="card">
-                        <h3>DOM Manipulation</h3>
-                        <p>Interact with webpage elements using JavaScript.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Event Handling</h3>
-                        <p>Respond to user interactions like clicks and keyboard input.</p>
-                    </div>
-                </section>
-            </div>
-        </div>
+            <article aria-labelledby="what-is-html">
+                <h3 id="what-is-html">What is HTML5?</h3>
+                <p>HTML5 is the latest evolution of the HyperText Markup Language, introducing new semantic elements that help create more meaningful web page structures.</p>
+            </article>
+        </section>
+        
+        <!-- Semantic HTML Section -->
+        <section id="semantics" aria-labelledby="semantics-heading">
+            <h2 id="semantics-heading">Semantic HTML Elements</h2>
+            <p>Semantic elements clearly describe their meaning to both browsers and developers.</p>
+            
+            <article aria-labelledby="common-elements">
+                <h3 id="common-elements">Common Semantic Elements</h3>
+                <ul>
+                    <li><code>&lt;header&gt;</code> - Top section of page or content area</li>
+                    <li><code>&lt;nav&gt;</code> - Navigation links</li>
+                    <li><code>&lt;main&gt;</code> - Primary content area</li>
+                    <li><code>&lt;section&gt;</code> - Thematic grouping of content</li>
+                    <li><code>&lt;article&gt;</code> - Self-contained composition</li>
+                    <li><code>&lt;aside&gt;</code> - Content indirectly related to main content</li>
+                    <li><code>&lt;footer&gt;</code> - Bottom section of page or content area</li>
+                </ul>
+            </article>
+            
+            <article aria-labelledby="benefits">
+                <h3 id="benefits">Benefits of Semantic HTML</h3>
+                <ul>
+                    <li>Improved accessibility for screen readers</li>
+                    <li>Better SEO through meaningful structure</li>
+                    <li>Easier code maintenance</li>
+                    <li>Enhanced cross-browser compatibility</li>
+                </ul>
+            </article>
+        </section>
+        
+        <!-- Accessibility Section -->
+        <section id="accessibility" aria-labelledby="accessibility-heading">
+            <h2 id="accessibility-heading">Accessibility Best Practices</h2>
+            <p>Making your website accessible ensures everyone can use it, regardless of ability or technology.</p>
+            
+            <article aria-labelledby="aria-roles">
+                <h3 id="aria-roles">ARIA Roles and Attributes</h3>
+                <p>ARIA (Accessible Rich Internet Applications) enhances accessibility for complex web applications:</p>
+                <ul>
+                    <li><code>role="banner"</code> - Identifies site-oriented content</li>
+                    <li><code>role="navigation"</code> - Identifies navigation sections</li>
+                    <li><code>aria-label</code> - Provides a label for an element</li>
+                    <li><code>aria-labelledby</code> - References another element as a label</li>
+                </ul>
+            </article>
+            
+            <article aria-labelledby="keyboard-nav">
+                <h3 id="keyboard-nav">Keyboard Navigation</h3>
+                <p>Ensure all interactive elements are accessible via keyboard:</p>
+                <ul>
+                    <li>Use semantic elements that are natively focusable</li>
+                    <li>Maintain logical tab order</li>
+                    <li>Provide visible focus indicators</li>
+                </ul>
+            </article>
+        </section>
+        
+        <!-- SEO Section -->
+        <section id="seo" aria-labelledby="seo-heading">
+            <h2 id="seo-heading">SEO Fundamentals</h2>
+            <p>Search Engine Optimization helps your content get discovered by users.</p>
+            
+            <article aria-labelledby="semantic-seo">
+                <h3 id="semantic-seo">Semantic HTML & SEO</h3>
+                <p>Search engines prioritize well-structured content:</p>
+                <ul>
+                    <li>Use proper heading hierarchy (h1 to h6)</li>
+                    <li>Include descriptive alt text for images</li>
+                    <li>Provide meaningful page titles and meta descriptions</li>
+                    <li>Use semantic elements to establish content relationships</li>
+                </ul>
+            </article>
+            
+            <article aria-labelledby="content-seo">
+                <h3 id="content-seo">Content Best Practices</h3>
+                <ul>
+                    <li>Write clear, concise content with relevant keywords</li>
+                    <li>Organize content in logical sections</li>
+                    <li>Use descriptive link text</li>
+                    <li>Ensure mobile-friendly responsive design</li>
+                </ul>
+            </article>
+        </section>
+        
+        <!-- Page Structure Example -->
+        <section id="structure" aria-labelledby="structure-heading">
+            <h2 id="structure-heading">HTML5 Page Structure</h2>
+            <p>A well-structured HTML5 document follows a logical hierarchy:</p>
+            
+            <article aria-labelledby="hierarchy">
+                <h3 id="hierarchy">Heading Hierarchy</h3>
+                <ul>
+                    <li>Use only one <code>&lt;h1&gt;</code> per page</li>
+                    <li>Maintain logical heading order (h1 → h2 → h3, etc.)</li>
+                    <li>Never skip heading levels (e.g., don't go from h2 to h4)</li>
+                    <li>Use headings to create a document outline</li>
+                </ul>
+            </article>
+        </section>
     </main>
     
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="social-links">
-                <a href="#" aria-label="Twitter">Twitter</a>
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-            </div>
-            <p><a href="#main-content" aria-label="Back to top">Back to Top</a></p>
-        </div>
+    <!-- Related Content Aside -->
+    <aside aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Resources</h2>
+        <ul>
+            <li><a href="#" aria-label="HTML5 Element Reference">HTML5 Element Reference</a></li>
+            <li><a href="#" aria-label="Accessibility Checklist">Web Accessibility Checklist</a></li>
+            <li><a href="#" aria-label="SEO Best Practices">SEO Best Practices</a></li>
+        </ul>
+    </aside>
+    
+    <!-- Page Footer -->
+    <footer role="contentinfo">
+        <h2 class="visually-hidden">Footer Information</h2>
+        
+        <p><a href="#top">Back to top</a></p>
     </footer>
 </body>
 </html>
+      
